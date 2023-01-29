@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calorie Calculator</title>
+  <style>
+    body {
+            margin: 0px;
+            padding: 0px;
+            background-image: url("https://manofmany.com/wp-content/uploads/2021/01/Fitness-Trends-2021-c.jpg");
+            background-color: #cccccc;
+            background-repeat:no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            font-family: 'Baloo Bhai 2', cursive;
+
+        }
+    /* CSS styling goes here */
+    form {
+        font width: 14px;
+        color: white;
+      
+      width: 300px;
+      margin: 46px 30px 0px 130px;
+      text-align: center;
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+    }
+    select {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+    }
+    .result {
+      color:white;
+      text-align: center;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+<form>
+  <label for="weight">Weight (kg):</label>
+  <input type="text" id="weight" name="weight"><br><br>
+  <label for="height">Height (cm):</label>
+  <input type="text" id="height" name="height"><br><br>
+  <label for="age">Age (years):</label>
+  <input type="text" id="age" name="age"><br><br>
+  <label for="sex">Sex:</label>
+  <select id="sex" name="sex">
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+  </select>
+  <br><br>
+  <label for="activity">Activity level:</label>
+  <select id="activity" name="activity">
+    <option value="1.2">Sedentary</option>
+    <option value="1.375">Lightly active</option>
+    <option value="1.55">Moderately active</option>
+    <option value="1.725">Very active</option>
+    <option value="1.9">Extremely active</option>
+  </select>
+  <br><br>
+  <button onclick="calculateCalories()">Calculate</button>
+</form> 
+
+<div class="result">
+  <p>Calories required in one day: <span id="calories-required"></span></p>
+</div>
+
+<script>
+  function calculateCalories() {
+    var weight = document.getElementById("weight").value;
+    var height = document.getElementById("height").value;
+    var age = document.getElementById("age");
+    var sex = document.getElementById("sex").value;
+    var activity = document.getElementById("activity").value;
+
+    var BMR = 0;
+    if (sex == "male"||) {
+        BMR = 66 + (13.7 * weight) + (5 * height) - (6.8 * age);
+    } else {
+        BMR = 655 + (9.6 * weight) + (1.8 * height) - (4.7 * age);
+    }
+    var calorieRequirement = BMR * activity;
+    document.getElementById("calories-required").innerHTML = calorieRequirement;
+    
+}
+</script>
+
+</body>
+</html>
+

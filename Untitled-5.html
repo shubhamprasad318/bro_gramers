@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Workout Fitness</title>
+  </head>
+  <body>
+   
+      <br />
+    
+      
+    <STYle>
+        
+        body {
+            margin: 10px -11px 63px 612px;
+            padding: 0px;
+            background-image: url("https://cdn.pixabay.com/photo/2017/05/25/15/08/jogging-2343558__480.jpg");
+            background-color: #9c7d7d;
+            background-repeat:no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            font-family: 'Baloo Bhai 2', cursive;
+
+        }
+
+    </STYle>
+    <main>
+      <section>
+        <h1>Welcome to Workout Fitness</h1>
+        <p>Get started by setting your goals and choosing a workout plan.</p>
+        
+        <li><a href="https://www.healthline.com/nutrition/workout-routine-for-men">choose a plan</a></li>
+      </section>
+      <section>
+        <h2>Today's Workout</h2>
+        <p>Exercise 1: Pushups - 3 sets of 10 reps</p>
+        <p>Exercise 2: Squats - 3 sets of 12 reps</p>
+        <p>Exercise 3: Lunges - 3 sets of 10 reps (each leg)</p>
+      </section>
+      <section>
+        <h2>Today's Nutrition</h2>
+        <p>Breakfast: Oatmeal with banana and almond butter</p>
+        <p>Lunch: Grilled chicken breast with mixed vegetables</p>
+        <p>Dinner: Salmon with quinoa and green beans</p>
+      </section>
+    </main>
+    <!-- Workout Log Form -->
+    <h1>Fitness Goal Tracker</h1>
+<form><div>
+  <label for="goal">Goal:</label>
+  <input type="text" id="goal" name="goal"></div>
+   
+  <div>
+    <label for="date">Date:</label>
+    <input type="date" id="date" name="date">
+  </div>
+ 
+    <label for="exercise">Exercise:</label>
+    <input type="text" id="exercise" name="exercise">
+  
+
+    <label for="sets">Sets:</label>
+    <input type="number" id="sets" name="sets" min="1">
+  
+    <div>
+    <label for="reps">Reps:</label>
+    <input type="number" id="reps" name="reps" min="1">
+  </div>
+ 
+    <label for="weight">Weight:</label>
+    <input type="number" id="weight" name="weight" min="0">
+  
+  
+    <input type="submit" value="Log Workout">
+  </form>
+  
+  <!-- Workout Log Table -->
+  <table>
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Exercise</th>
+        <th>Sets</th>
+        <th>Reps</th>
+        <th>Weight</th>
+      </tr>
+    </thead>
+    <tbody id="workout-log">
+      <!-- Table rows will be dynamically added here with JavaScript -->
+    </tbody>
+  </table>
+  
+    <footer>
+      <p>Copyright Workout Fitness</p>
+    </footer>
+  </body>
+</html>
